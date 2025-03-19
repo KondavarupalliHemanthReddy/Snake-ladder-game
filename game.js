@@ -227,6 +227,6 @@ document.getElementById("restartBtn").addEventListener("click", function () {
 });
 document.getElementById("quitBtn").addEventListener("click", function () {
     if (confirm("Are you sure you want to quit the game?")) {
-        window.location.href = "home.html"; // Redirect to the home page
+        window.location.href = "index.html"; // Redirect to the home page
     }
 });
