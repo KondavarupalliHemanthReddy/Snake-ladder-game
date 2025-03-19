@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: url(images/main1.jpg);
+    background-position:-180px;
+    background-size: cover;
+    font-family: "Comfortaa", sans-serif;
+
+  } 
+  #dice1{
+    border-radius: 20px;
+  }
+  
+  .cont {
+    display: grid;
+    width: 600px;
+    grid-template-columns: repeat(10, 1fr);
+    margin: 0px 0 0px 0;
+    /* margin-top:200px; */
+    
+  }
+  
+  .cont div {
+    width: 60px;
+    height: 60px;
+    /* border: 0.2px solid black; */
+  }
+  
+  #p1,
+  #p2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: relative;
+    border: 3px solid black;
+  
+    /* position: absolute; */
+  }
+  
+  #p1 {
+    position: relative;
+    top: 0px;
+    transition: all linear 0.5s;
+    /* top: 0; */
+    background-color: blue;
+    left: -62px;
+    z-index: 2;
+  }
+  
+  #p2 {
+    z-index: 2;
+    position: relative;
+    top: -55px;
+    left: -62px;
+    transition: all linear 0.5s;
+    background-color:green;
+  }
+  
+  .board {
+    position: relative;
+    top: -615px;
+    left: 8px;
+    /* z-index: -1; */
+    margin: 0;
+    width: 615px;
+    height: 615px;
+  }
+  #diceCont {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 200px;
+    left: 120px;
+    font-size: 2rem;
+    z-index: 99;
+    color: white;
+  }
+  #diceBtn {
+    z-index: 99;
+    padding: 5px;
+    cursor: pointer;
+    /* background-color: rgb(75, 140, 197); */
+   
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+  }
+  /* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+#winnerMessage {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+#playAgain {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#playAgain:hover {
+  background-color: #45a049;
+}
+#restartBtn {
+  position: fixed; 
+  top: 20px;
+  right: 20px; 
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px; 
+  height: 50px; 
+  font-size: 20px; 
+  cursor: pointer; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; 
+}
+
+#restartBtn:hover {
+  background-color: #454ba0; 
+}
+/* Quit Button */
+#quitBtn {
+  position: fixed; 
+  top: 20px; /* Distance from the top */
+  left: 20px; /* Distance from the left */
+  background-color: #ff4d4d; /* Red background */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Circular button */
+  width: 50px; /* Button size */
+  height: 50px; /* Button size */
+  font-size: 20px; /* Icon size */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+#quitBtn:hover {
+  background-color: #e60000; /* Darker red on hover */
+}
+
+/* Mobile Responsiveness for Quit Button */
+
+
+/* Mobile Responsiveness */
+@media only screen and (max-width:768px) {
+  .cont {
+    margin-top: 300px;
+  }
+  #diceCont {
+   top:1050px;
+   left:220px;
+   
+    width: 250px;
+
+  }
+  .modal-content {
+    width: 90%; /* Make modal even narrower */
+    padding: 20px; /* Smaller padding */
+  }
+
+  #winnerMessage {
+    font-size: 28px; /* Smaller font size */
+  }
+
+  #playAgain {
+    padding: 6px 12px; /* Smaller button */
+    font-size: 25px; /* Smaller font size */
+    border-radius: 12px;
+  }
+  #restartBtn {
+    top: 10px; /* Adjust position for smaller screens */
+    right: 10px; /* Adjust position for smaller screens */
+    width: 70px; /* Smaller button size */
+    height: 70px; /* Smaller button size */
+    font-size:20px; /* Smaller icon size */
+}
+#quitBtn {
+  top: 10px; /* Adjust position for smaller screens */
+  left: 10px; /* Adjust position for smaller screens */
+  width: 70px; /* Smaller button size */
+  height: 70px; /* Smaller button size */
+  font-size:20px; /* Smaller icon size */
+}
+}
+
+
