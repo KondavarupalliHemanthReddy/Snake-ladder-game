@@ -212,10 +212,10 @@ document.getElementById("diceBtn").addEventListener("click", function () {
     // document.getElementById("dice").innerText=num
 
     if (tog % 2 != 0) {
-        document.getElementById('tog').innerText = `${player2Name}'s Turn : `;
+        document.getElementById('tog').innerText = `${player2Name} `;
         play('p1', 'p1sum', 0, num);
     } else if (tog % 2 == 0) {
-        document.getElementById('tog').innerText = `${player1Name}'s Turn : `;
+        document.getElementById('tog').innerText = `${player1Name}`;
         play('p2', 'p2sum', 55, num);
     }
 

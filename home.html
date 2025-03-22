@@ -23,7 +23,7 @@
         <i class="fas fa-redo"></i> <!-- Font Awesome restart icon -->
     </button>
     <div id="diceCont">
-        <p id="tog"><span id="player1Name">Player 1</span>'s Turn : </p>
+        <p id="tog"><span id="player1Name">Player 1</span> </p>
         <!-- <p id="dice">0</p> -->
         <button id="diceBtn"><img id="dice1" src="images/dice2.png" alt="Dice" width="70px"></button>
     </div>
@@ -358,11 +358,8 @@
 
         // Update player names in the game UI
         document.getElementById("player1Name").textContent = player1Name;
-        document.getElementById("tog").textContent = `${player1Name}'s Turn : `;
+        document.getElementById("tog").textContent = `${player1Name}' `;
     </script>
-    <script src="game.js"></script>
-  
+    <script src="game.js"></script> 
 </body>
-
-
 </html>
